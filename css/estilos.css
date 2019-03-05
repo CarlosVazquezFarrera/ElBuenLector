@@ -1,0 +1,21 @@
+body
+{
+    background-color: #F8F7F3;
+}
+.buscador
+{
+    border-radius: 10px;
+    background-color:	rgb(218, 211, 202);
+}
+.btn-outline-dark
+{
+    margin-right: 20px;
+    background-color: #7b5849;
+    color: white;
+}
+
+.navbar-brand
+{
+    font-family: 'Laila', serif;
+    font-size: 150%;
+}
