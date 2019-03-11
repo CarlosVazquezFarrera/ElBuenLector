@@ -12,5 +12,5 @@
 </head>
 <body>
 <div class="container-fluid">
-<?php include ("includes/menu.php")?>
+<?php require_once ("includes/menu.php")?>
         

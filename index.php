@@ -1,4 +1,4 @@
-<?php include ("includes/header.php")?> 
+<?php require_once ("includes/header.php")?> 
     <div class="container">
         <div class="row align-items-end">
             <div class="col-md-12 col-lg-6">
@@ -88,4 +88,4 @@
     </div> 
     <hr>
     <p class = "text-center">ElBuenLector &copy; <?= date("Y");?></p>
-<?php include ("includes/footer.php")?>
+<?php require_once ("includes/footer.php")?>
