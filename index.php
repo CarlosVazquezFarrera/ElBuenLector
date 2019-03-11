@@ -1,5 +1,4 @@
 <?php include ("includes/header.php")?> 
-    <?php include ("includes/menu.php")?>
     <div class="container">
         <div class="row align-items-end">
             <div class="col-md-12 col-lg-6">

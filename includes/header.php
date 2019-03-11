@@ -12,4 +12,5 @@
 </head>
 <body>
 <div class="container-fluid">
+<?php include ("includes/menu.php")?>
         
