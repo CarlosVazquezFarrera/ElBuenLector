@@ -4,14 +4,15 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
     <ul class="navbar-nav mr-auto">
+      
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Inicio</a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="leido.php">Lo más leido</a>
+        <a class="nav-link" href="genero.php">Géneros</a>
       </li>
 
       <li class="nav-item dropdown active">

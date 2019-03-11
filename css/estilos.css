@@ -1,10 +1,14 @@
 body
 {
     background-color: #F8F7F3;
+    margin: 0;
+}
+.container-fluid
+{
+    padding: 0;
 }
 .buscador
 {
-    border-radius: 10px;
     background-color:	rgb(218, 211, 202);
     color: white;
 }
@@ -29,3 +33,21 @@ a.dropdown-item:active
 {
     margin-top: 20px;
 }
+.login
+{
+    color: black;
+    background-color: rgb(218, 211, 202);
+    border: 1px solid  #7b5849;
+}
+.login:hover
+{
+    color: white;
+    background-color: #7b5849;
+    border: 1px solid  #7b5849;
+}
+.login:focus
+{
+    background-color:blue;
+}
+
+

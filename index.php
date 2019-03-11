@@ -1,46 +1,92 @@
-<?php include ("includes/header.php")?>
-    <div class="row">
-        <div class="col">   
-            <?php include ("includes/menu.php")?>
-        </div> 
-    </div> 
-    
+<?php include ("includes/header.php")?> 
+    <?php include ("includes/menu.php")?>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <!-- Carrucel -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <!-- Imagen1 -->
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/b1.jpg" alt="First slide">
+        <div class="row align-items-end">
+            <div class="col-6 ">
+                <p class = "h5 text-justify">Aquí podrás compartir tu opinión con aquellas personas que tengan gustos literarios similares al tuyo.</p>
+                <img src="images/mundo2.png" width = 100%>
+            </div>
+
+            <div class="col-6">
+                <h1 class="text-center">Abre una cuenta</h1>
+                <form method="POST" action ="">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type = "text" placeholder = "Nombre" class="form-control" required>
                         </div>
-                        <!-- Imagen2 -->
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="images/b2.jpg" alt="Second slide">
+                        <div class="col-6">
+                            <input type = "text" placeholder = "Apellidos" class="form-control" required>
                         </div>
-                        <!-- Imagen3 -->
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="images/b3.jpg" alt="Third slide">
+                        <div class="col-12 mt-2">
+                            <input type = "email" placeholder = "Correo electrónico" class="form-control" required>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <input type = "password" placeholder = "Contraseña" class="form-control" required>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <input type = "password" placeholder = "Repite tu contraseña" class="form-control" required>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="radio" name="options"  checked value = "Hombre"> Hobre
+                            <input type="radio" name="options"  value = "Mujer"> Mujer
+                        </div>
+                        <div class="col-12 mt-2">
+                            <label class= "h6">Fecha de nacimiento</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <select class="custom-select">
+                                        <option value="">Dia</option>
+                                        <?php
+                                        for ($i = 1; $i <= 31; $i++)
+                                        {
+                                        ?>
+                                            <option value=<?=$i?>> <?=$i?> </option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select class="custom-select">
+                                        <option value="">Mes</option>
+                                        <?php
+                                        for ($i = 1; $i <= 12; $i++)
+                                        {
+                                        ?>
+                                            <option value=<?=$i?>> <?=$i?> </option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select class="custom-select">
+                                        <option value="">Año</option>
+                                        <?php
+                                        $year = date("Y");
+                                        for ($i = $year - 18; $i >= $year - 109; $i--)
+                                        {
+                                        ?>
+                                            <option value=<?=$i?>> <?=$i?> </option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <small class = "text-justify">Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies.</small>
+                        </div>
+                        <div class="col-12 mt-3">                    
+                            <input type = "submit" value = "Registrarse" class = "btn btn-outline-dark btn-block login">
                         </div>
                     </div>
 
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
+                </form>
             </div>
         </div>
-    </div>
+    </div> 
+    <hr>
+    <p class = "text-center">ElBuenLector &copy; <?= date("Y");?></p>
 <?php include ("includes/footer.php")?>
