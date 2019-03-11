@@ -2,12 +2,12 @@
     <?php include ("includes/menu.php")?>
     <div class="container">
         <div class="row align-items-end">
-            <div class="col-6 ">
+            <div class="col-md-12 col-lg-6">
                 <p class = "h5 text-justify">Aquí podrás compartir tu opinión con aquellas personas que tengan gustos literarios similares al tuyo.</p>
                 <img src="images/mundo2.png" width = 100%>
             </div>
 
-            <div class="col-6">
+            <div class="col-md-12 col-lg-6">
                 <h1 class="text-center">Abre una cuenta</h1>
                 <form method="POST" action ="">
                     <div class="row">
