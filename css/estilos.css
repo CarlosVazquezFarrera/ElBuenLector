@@ -49,5 +49,13 @@ a.dropdown-item:active
 {
     background-color:blue;
 }
-
-
+.btn-outline-secondary:hover
+{
+    color: black;
+    background-color:rgb(218, 211, 202);
+    border: 1px solid  black;
+}
+.img_libro:hover
+{
+    cursor: pointer;
+}

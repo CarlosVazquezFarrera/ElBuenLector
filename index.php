@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-12 mt-5">
-                            <small class = "text-justify">Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies.</small>
+                            <small class = "text-justify">Al hacer clic en "Registrarte", acepta nuestras Condiciones, la Política de datos y la Política de cookies.</small>
                         </div>
                         <div class="col-12 mt-3">                    
                             <input type = "submit" value = "Registrarse" class = "btn btn-outline-dark btn-block login">
