@@ -1,9 +1,9 @@
 <?php require_once ("includes/header.php")?> 
     <div class="container">
         <div class="row align-items-end">
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-12 col-lg-6 ">
                 <p class = "h5 text-justify">Aquí podrás compartir tu opinión con aquellas personas que tengan gustos literarios similares al tuyo.</p>
-                <img src="images/mundo2.png" width = 100%>
+                <img src="images/libros.png" width = 100%>
             </div>
 
             <div class="col-md-12 col-lg-6">
@@ -74,10 +74,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mt-5">
+                        <div class="col-12 mt-2">
                             <small class = "text-justify">Al hacer clic en "Registrarte", acepta nuestras Condiciones, la Política de datos y la Política de cookies.</small>
                         </div>
-                        <div class="col-12 mt-3">                    
+                        <div class="col-12 mt-2">                    
                             <input type = "submit" value = "Registrarse" class = "btn btn-outline-dark btn-block login">
                         </div>
                     </div>
