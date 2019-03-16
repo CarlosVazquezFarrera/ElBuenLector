@@ -1,5 +1,8 @@
 <?php require_once ("includes/header.php")?> 
-<?php $estrellas = 4.3?>
+<?php 
+$estrellas = 4.3;
+$calificacion = 0;
+?>
     <div class="container">
         <div class="row">
             <!-- imagen -->
@@ -21,7 +24,8 @@
             <div class="wd-100">
             </div>
             <div class="col-12 col-lg-6">
-
+                <p class = "h5">¿Cómo lo calificas?<p>
+                <div class ="" id="calificar"></div> 
             </div>
 
         </div>
@@ -29,6 +33,11 @@
         <div class="row">
             <div class="col-12">
 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                
             </div>
         </div>
     </div>

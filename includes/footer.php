@@ -5,7 +5,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.rateyo.js"></script>
     <script>
-         var estrellas = <?php echo $estrellas?>;
+        var estrellas = <?php echo $estrellas?>;
         $(function () {
             $("#estrellas").rateYo(
             {
@@ -21,6 +21,24 @@
             });
  
         });
+
+        var calificacion = <?php echo $calificacion?>;
+        $(function () 
+        {
+            $("#calificar").rateYo(
+            {
+                rating: calificacion,
+                spacing   : "5px",
+                halfStar: true,
+                onSet: function (rating, rateYoInstance) 
+                {
+                    alert("Le has dado " + rating + " estrellas");
+                    window.location="http://localhost/ElBuenLector/libro.php";
+                    //window.location="http://localhost/estrella/funciones/insert.php?id=<?=4?>&user=<?=2?>&calificacion="+rating;
+                }
+            });
+        });
+
     </script>
   </body>
 </html>
