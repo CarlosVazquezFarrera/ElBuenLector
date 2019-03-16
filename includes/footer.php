@@ -7,7 +7,7 @@
     <script>
          var estrellas = <?php echo $estrellas?>;
         $(function () {
-            $("#rateYo").rateYo(
+            $("#estrellas").rateYo(
             {
                 rating    : estrellas,
                 spacing   : "5px",
@@ -20,7 +20,7 @@
                 }
             });
  
-})
+        });
     </script>
   </body>
 </html>
