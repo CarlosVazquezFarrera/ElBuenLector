@@ -8,7 +8,7 @@
 
         <div class="row">
             <?php
-            for ($i = 1; $i <= 20; $i++)
+            for ($i = 1; $i <=5; $i++)
             {
             ?>
                 <div class="col-12 col-md-6 col-lg-4 mt-3">

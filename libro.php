@@ -30,15 +30,28 @@ $calificacion = 0;
 
         </div>
         <hr>
-        <div class="row">
-            <div class="col-12">
-
-            </div>
+        <div class="w-100 mt-5">
         </div>
         <div class="row">
             <div class="col">
-                
+                <p class="text-center"><strong><a href="#">Inicia Sesión</a> para poder comentar</strong></p>
             </div>
         </div>
+
+        <?php
+        for ($i = 1; $i <=5; $i++)
+        {
+        ?>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-1 mt-3">
+                <img src ="images/users/1.JPG" class="ProfilePicture img-circle">
+            </div>
+            <div class="col-12 col-md-11">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, voluptatem hic. Illo, quod debitis. Hic earum fugiat officia aspernatur veritatis commodi odio tempora rerum ipsam. Neque ullam autem ipsum placeat?</p>
+            </div>
+        </div>
+        <?php
+        }
+        ?>
     </div>
 <?php require_once ("includes/footer.php")?> 

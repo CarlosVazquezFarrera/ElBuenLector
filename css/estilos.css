@@ -69,3 +69,8 @@ a.dropdown-item:active
 {
     background-color:rgb(218, 211, 202);
 }
+.ProfilePicture
+{
+    width: 90px;
+    border-radius:150px;
+}
