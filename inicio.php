@@ -26,8 +26,7 @@
                     <label for="" class = "mt-4">Contraseña</label>
                     <input type = "password" placeholder = "***********" class="form-control" required>
                 <!-- </div>  -->
-
-
+                    <p class = "text-center mt-4">¿No tienes cuenta? <a href = "index.php">regístrate aquí</a></p>
                 <input type = "submit" value = "Iniciar sesión" class="form-control mt-4 login">
             </form>
         </div>
