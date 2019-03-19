@@ -74,3 +74,26 @@ a.dropdown-item:active
     width: 90px;
     border-radius:150px;
 }
+.modal-content
+{
+    margin-top: 80px;
+    background-color: #f8f7f3;
+    padding: 0 18;
+    border-radius: 10px;
+    border: #7b5849 solid 1px;
+}
+.user-img img
+{
+    width: 120px;
+}
+.user-img
+{
+    margin-top: -60px;
+    margin-bottom: 45px;
+}
+.inicio:hover
+{
+    color: white;
+    background-color: #7b5849;
+    opacity: .9;
+}

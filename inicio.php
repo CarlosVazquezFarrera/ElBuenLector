@@ -1,34 +1,23 @@
 <?php require_once ("includes/header.php")?> 
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-4 offset-md-4 ">
-            <form action="" method="post" class = "form-login">
-                <!-- <p class = "mt-3 h4">Iniciar sesión</p> -->
-                
-                <div class = "d-none d-md-block offset-md-3">
-                    <img src ="images/ico.png" width = "150px">
+    <div class="modal-dialog text-center">
+        <div class="col-sm-9 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src = "images/face.png">
                 </div>
-                
-
-                <!-- <div class="input-group mt-5">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><img src ="images/user.png" width = "20px"></span>
-                    </div> -->
-                    <label for="" class = "mt-5">Email</label>
-                    <input type = "email" placeholder = "Email" class="form-control" required>
-                <!-- </div>     -->
-                
-                
-                <!-- <div class="input-group mt-4">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><img src ="images/pass.png" width = "20px"></span>
-                    </div> -->
-                    <label for="" class = "mt-4">Contraseña</label>
-                    <input type = "password" placeholder = "***********" class="form-control" required>
-                <!-- </div>  -->
-                    <p class = "text-center mt-4">¿No tienes cuenta? <a href = "index.php">regístrate aquí</a></p>
-                <input type = "submit" value = "Iniciar sesión" class="form-control mt-4 login">
-            </form>
+                <div class="col-12 form-input">
+                    <form action="" method="post">
+                        <div class="form-group mt-3">
+                            <input type = "email" placeholder = "Correo electrónico" class="form-control" required>
+                        </div>
+                        <div class="form-group my-3">
+                            <input type = "password" placeholder = "Contraseña" class="form-control" required>
+                        </div>
+                        <input type = "submit" value = "Registrarse" class = "btn btn-outline-dark btn-block mb-5 inicio">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
