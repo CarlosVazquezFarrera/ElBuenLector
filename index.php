@@ -78,15 +78,15 @@
                             <small class = "text-justify">Al hacer clic en "Registrarte", acepta nuestras Condiciones, la Política de datos y la Política de cookies.</small>
                         </div>
                         <div class="col-12 mt-2">
-                            <p class = "text-center">¿Ya tienes cuenta? <a href = "inicio.php">Inicia sesión aquí</a></p>
+                            <p class = "text-center">¿Ya tienes cuenta? <a href="" data-toggle="modal" data-target=".bd-example-modal-lg">Inicia sesión aquí</a></p>
                         </div>
                         <div class="col-12 mt-2">                    
                             <input type = "submit" value = "Registrarse" class = "btn btn-outline-dark btn-block login">
                         </div>
                     </div>
-
                 </form>
             </div>
+            <?php require_once ("includes/modal.php")?> 
         </div>
     </div> 
     <hr>
