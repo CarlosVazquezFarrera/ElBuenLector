@@ -34,7 +34,8 @@ $calificacion = 0;
         </div>
         <div class="row">
             <div class="col">
-                <p class="text-center"><strong><a href="#">Inicia Sesión</a> para poder comentar</strong></p>
+                <p class="text-center"><strong><a href="" data-toggle="modal" data-target=".bd-example-modal-lg">Inicia sesión aquí</a> para poder comentar</strong></p>
+                <?php require_once ("includes/modal.php")?> 
             </div>
         </div>
 

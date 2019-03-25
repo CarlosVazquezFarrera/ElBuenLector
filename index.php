@@ -89,6 +89,4 @@
             <?php require_once ("includes/modal.php")?> 
         </div>
     </div> 
-    <hr>
-    <p class = "text-center">ElBuenLector &copy; <?= date("Y");?></p>
 <?php require_once ("includes/footer.php")?>

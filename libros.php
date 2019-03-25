@@ -13,11 +13,10 @@
             ?>
                 <div class="col-12 col-md-6 col-lg-4 mt-3">
                     <div class="card">          
-                        <img src = "images/Captura.JPG" class="card-img-top img_libro">
+                        <a href="libro.php"><img src = "images/Captura.JPG" class="card-img-top img_libro"></a>
                         <div class="card-body">
                             <h5 class="card-title">Fuego y sangre</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="libro.php" class="btn btn btn-outline-secondary btn-block">Ver libro </a>
                         </div>
                     </div>
                 </div>  

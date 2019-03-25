@@ -97,4 +97,49 @@ a.dropdown-item:active
 {
     border: #7b5849 1px solid;
     border-radius: 5px;
+}/*
+.c-img 
+{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
+.c-img ::before, .c-img::after
+{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 4px;
+    background-color: white;
+    transition: all .3s;
+}
+.c-img ::before
+{
+    left: -100%; top:10px;
+}
+.c-img::after
+{
+    left: 100%; bottom: 10px;
+}
+.c-img :hover::before, .c-img:hover::after
+{
+    left: 15px;
+}
+.txt
+{
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    transition: all .3s;
+    transform:  scale(1,5);
+    opacity: 0;
+}
+.txt:hover
+{
+    transform:  scale(1);
+    opacity: 1;
+}
+
+
+*/
