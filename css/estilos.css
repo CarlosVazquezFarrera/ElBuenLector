@@ -93,3 +93,8 @@ a.dropdown-item:active
     background-color: #7b5849;
     opacity: .9;
 }
+.sesion
+{
+    border: #7b5849 1px solid;
+    border-radius: 5px;
+}
