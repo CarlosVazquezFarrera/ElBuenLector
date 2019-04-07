@@ -1,3 +1,6 @@
+<?php session_start();
+    require_once("DB/conectar.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

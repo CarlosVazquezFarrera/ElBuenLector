@@ -22,7 +22,7 @@ body
 
 .navbar-brand
 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;  
     font-size: 150%;
 }
 a.dropdown-item:active
@@ -97,49 +97,59 @@ a.dropdown-item:active
 {
     border: #7b5849 1px solid;
     border-radius: 5px;
-}/*
-.c-img 
+}
+.c-img
 {
+    width: 95%;
     position: relative;
-
     display: flex;
     align-items: center;
     overflow: hidden;
 }
-.c-img ::before, .c-img::after
+.c-img img
+{
+    width: 100%;
+    border-radius: 5px;
+}
+.c-img img,.c-img .txt
+{
+    cursor: pointer;
+}
+.c-img .txt
+{
+    position: absolute;
+    color: white;
+    left: 35%;
+    transition: all .3s;
+    opacity: 0;
+    transform: scale(1.5);
+}
+.c-img:hover .txt
+{
+    opacity: 1;
+    transform: scale(1);
+    -webkit-text-stroke: #7b5849 1px; 
+}
+.c-img:before, .c-img:after
 {
     content: "";
     position: absolute;
     width: calc(100% - 30px);
-    height: 4px;
+    height: 5px;
     background-color: white;
     transition: all .3s;
 }
-.c-img ::before
+.c-img:before
 {
-    left: -100%; top:10px;
+    left: -100%;
+    top:10px;
 }
-.c-img::after
+.c-img:after
 {
-    left: 100%; bottom: 10px;
+    left: 100%;
+    bottom: 10px;
 }
-.c-img :hover::before, .c-img:hover::after
+.c-img:hover:before, .c-img:hover:after
 {
     left: 15px;
 }
-.txt
-{
-    font-family: 'Merriweather', serif;
-    position: absolute;
-    transition: all .3s;
-    transform:  scale(1,5);
-    opacity: 0;
-}
-.txt:hover
-{
-    transform:  scale(1);
-    opacity: 1;
-}
-
-
-*/

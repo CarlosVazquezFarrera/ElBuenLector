@@ -14,22 +14,26 @@
       <li class="nav-item active">
         <a class="nav-link" href="generos.php">Géneros</a>
       </li>
-
+      <?php if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"]))
+      {
+      ?>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Carlos
+         <?=$_SESSION["usuario"]?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Perfil</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          <a class="dropdown-item" href="">Cerrar Sesión</a>
         </div>
       </li>
-
+      <?php
+      }
+      ?>
     </ul>
     <form class="form-inline my-2 my-lg-0" action = "libros.php" method = "POST">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" required>
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><img src="images/buscar.png"></button>
     </form>
   </div>
 
