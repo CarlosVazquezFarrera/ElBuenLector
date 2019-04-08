@@ -63,8 +63,10 @@
             $myQuey = "INSERT INTO usuario (nombre, apellidos, correo, password) VALUES ('{$_POST["nombre"]}', '{$_POST["apellidos"]}','{$_POST["correo"]}', '".MD5($_POST["password"])."')";
             if ($mysqli->query($myQuey))
             {
-              //  header('Location: http://localhost/ElBuenLector/ok.php');
-                echo "insertado";
+                 if (enviarEmail($_POST["correo"]))
+                {
+                    header('Location: http://localhost/ElBuenLector/ok.php');
+                }
             }
         }
 
@@ -73,7 +75,7 @@
     {
         $user = $mysqli->query("SELECT * FROM usuario WHERE correo = '{$_POST["correoLogin"]}' AND password = '".md5($_POST["contraseña"])."'  " );
         $datos = $user->fetch_assoc();
-        //(strcmp($_POST["password"],$_POST["passwordConfirmar"]) !== 0)
+
         if (strcmp($datos["correo"], $_POST["correoLogin"]) !==0 || strcmp($datos["password"], md5($_POST["contraseña"])) !==0)
         {
             $errores ++;
@@ -86,6 +88,7 @@
             $_SESSION["usuario"] = $datos["nombre"];
             $_SESSION["correo"] = $datos["nombre"];
             $_SESSION["img"] = $datos["img"];
+
             header('Location: http://localhost/ElBuenLector/');
         }
     }
