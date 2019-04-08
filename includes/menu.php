@@ -31,8 +31,8 @@
       }
       ?>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action = "libros.php" method = "POST">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" required>
+    <form class="form-inline my-2 my-lg-0" action = "libros.php" method = "GET">
+      <input class="form-control mr-sm-2" type="search" name = "buscar" placeholder="Buscar..." aria-label="Search" required>
       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><img src="images/buscar.png"></button>
     </form>
   </div>
