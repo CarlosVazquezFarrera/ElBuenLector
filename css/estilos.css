@@ -153,3 +153,9 @@ a.dropdown-item:active
 {
     left: 15px;
 }
+.registro
+{
+    border: 1px solid #7b5849;
+    padding: 15px;
+    border-radius: 15px;
+}

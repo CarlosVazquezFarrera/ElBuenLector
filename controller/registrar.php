@@ -63,7 +63,7 @@
             $myQuey = "INSERT INTO usuario (nombre, apellidos, correo, password) VALUES ('{$_POST["nombre"]}', '{$_POST["apellidos"]}','{$_POST["correo"]}', '".MD5($_POST["password"])."')";
             if ($mysqli->query($myQuey))
             {
-                 if (enviarEmail($_POST["correo"]))
+                if (enviarEmail($_POST["correo"]))
                 {
                     header('Location: http://localhost/ElBuenLector/ok.php');
                 }

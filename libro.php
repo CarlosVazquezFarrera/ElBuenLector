@@ -32,12 +32,19 @@ $calificacion = 0;
         <hr>
         <div class="w-100 mt-5">
         </div>
-        <div class="row">
-            <div class="col">
-                <p class="text-center"><strong><a href="" data-toggle="modal" data-target=".bd-example-modal-lg">Inicia sesión aquí</a> para poder comentar</strong></p>
-                <?php require_once ("includes/modal.php")?> 
+
+        <?php if (!isset($_SESSION["usuario"]) && empty($_SESSION["usuario"]))
+        {
+        ?>
+            <div class="row">
+               <div class="col">
+                    <p class="text-center"><strong><a href="" data-toggle="modal" data-target=".bd-example-modal-lg">Inicia sesión aquí</a> para poder comentar</strong></p>
+                    <?php require_once ("includes/modal.php")?>     
+                </div>
             </div>
-        </div>
+        <?php
+        }
+        ?>
 
         <?php
         for ($i = 1; $i <=5; $i++)

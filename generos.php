@@ -5,7 +5,7 @@
        
         <div class="col-4">
             <div class="c-img">
-                <img src = "images/generos/autoayuda.jpg">
+                <a hrf = "libros"><img src = "images/generos/autoayuda.jpg"></a>
                 <div class="txt">
                     <h3>Autoayuda</h3>
                 </div>                
