@@ -78,9 +78,12 @@
 
         if (strcmp($datos["correo"], $_POST["correoLogin"]) !==0 || strcmp($datos["password"], md5($_POST["contraseña"])) !==0)
         {
-            $errores ++;
-            $alerta = "warning";
-            $txt_error = "Email o contraseña incorrector";
+            echo '<script> 
+            {
+              alert("Usuario o contraseña incorrectos");
+              window.history.go(-1);
+            }
+            </script>';
         }
         else
         {
@@ -89,7 +92,7 @@
             $_SESSION["correo"] = $datos["nombre"];
             $_SESSION["img"] = $datos["img"];
 
-            header('Location: http://localhost/ElBuenLector/');
+            //header('Location: http://localhost/ElBuenLector/');
         }
     }
 ?>

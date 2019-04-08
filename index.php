@@ -1,6 +1,8 @@
-<?php require_once ("includes/header.php")?>
-<?php require_once("function/funciones.php")?>
-<?php require_once("controller/registrar.php")?>
+<?php 
+    require_once ("includes/header.php");
+    require_once("function/funciones.php");
+    require_once("controller/registrar.php");
+ ?>
 
     <div class="container">
         <div class="row align-items-end">

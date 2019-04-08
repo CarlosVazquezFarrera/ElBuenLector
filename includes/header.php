@@ -1,5 +1,9 @@
 <?php session_start();
     require_once("DB/conectar.php");
+    if (isset($_GET["session"]) && $_GET["session"] == "logout")
+    {
+        session_destroy();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
