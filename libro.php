@@ -55,7 +55,7 @@
         ?>
             <div class="row">
                <div class="col">
-                    <p class="text-center"><strong><a href="" data-toggle="modal" data-target="#sesion">Inicia sesión aquí</a> para poder comentar</strong></p>
+                    <p class="text-center"><strong><a href="" data-toggle="modal" data-target="#sesion">Inicia sesión aquí</a> para poder comentar y calificar</strong></p>
                     <?php require_once ("includes/modal.php")?>     
                 </div>
             </div>

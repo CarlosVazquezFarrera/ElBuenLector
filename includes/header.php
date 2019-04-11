@@ -3,9 +3,7 @@
     if (isset($_GET["session"]) && $_GET["session"] == "logout")
     {
         session_destroy();
-        echo "
-            location.reload();
-        ";
+        header('Location: http://localhost/ElBuenLector/');
     }
 ?>
 <!DOCTYPE html>
