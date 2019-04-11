@@ -10,7 +10,10 @@
                             WHERE l.id_libro = {$_GET['libro']}");
     $dato = $libro->fetch_assoc();
 
-
+    $comentarios = $mysqli->query("SELECT u.nombre, u.apellidos, u.img, c.comentario
+                                FROM usuario u JOIN comentario c ON (u.id_usuario = c.id_usuario)
+                                WHERE c.id_libro = {$_GET['libro']}
+                                ORDER BY c.id_comentario DESC");
     $estrellas = 4.3;
     $calificacion = 0;
 ?>
@@ -45,22 +48,33 @@
             }
             ?>
 
-        </div>
-        <hr>
-        <div class="w-100 mt-5">
-        </div>
-        <div class="row align-items-end">
-            <div class="col-11">
-                <textarea class="form-control" placeholder="Escribe un comentario" required></textarea>
             </div>
-            <div class="col-1">
-                <button type="submit" class="btn btn-outline-dark login">Comentar</button>
+            <hr>
+            <div class="w-100 mt-5">
             </div>
-        </div>
+        <!-- comentario -->
+            <?php if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"]))
+            {
+            ?>
+            <form action="controller/comentario.php" method="post">
+                <input type="hidden" name = "libro" value=<?=$_GET["libro"]?>>   
+                <input type="hidden" name = "usuario" value =<?php  if (isset($_SESSION["usuario"])) echo $_SESSION["id_usuario"] ?>>
+                <div class="row align-items-end">
+                    <div class="col-11">
+                        <textarea class="form-control" name= "comentario" placeholder="Escribe un comentario" required></textarea>
+                    </div>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-outline-dark login">Comentar</button>
+                    </div>
+                </div>
+            </form>
+            <?php
+            }
+            ?>
 
-        <?php if (!isset($_SESSION["usuario"]) && empty($_SESSION["usuario"]))
-        {
-        ?>
+             <?php if (!isset($_SESSION["usuario"]) && empty($_SESSION["usuario"]))
+             {
+            ?>
             <div class="row">
                <div class="col">
                     <p class="text-center"><strong><a href="" data-toggle="modal" data-target="#sesion">Inicia sesión aquí</a> para poder comentar y calificar</strong></p>
@@ -71,16 +85,16 @@
         }
         ?>
         <!-- comentarios -->
+        <div class="w-100 mt-5"></div>
+        <hr>
         <?php
-        for ($i = 1; $i <=5; $i++)
+        while ($comentario = $comentarios->fetch_assoc())
         {
         ?>
-        <div class="row align-items-center">           
-            <div class="col-12 col-md-1 mt-3">
-                <img src ="images/users/1.JPG" class="ProfilePicture img-circle">
-            </div>
-            <div class="col-12 col-md-11">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, voluptatem hic. Illo, quod debitis. Hic earum fugiat officia aspernatur veritatis commodi odio tempora rerum ipsam. Neque ullam autem ipsum placeat?</p>
+        <div class="row">           
+            <div class="col-12 mb-3">
+                <img src ="images/users/<?=$comentario["img"]?>" class="ProfilePicture img-circle mr-3">
+                <p class = "comentario"><strong class="nombre"><?=ucwords($comentario["nombre"])." ".ucwords($comentario["apellidos"])?></strong> <?=$comentario["comentario"]?></p>
             </div>
         </div>
         <?php

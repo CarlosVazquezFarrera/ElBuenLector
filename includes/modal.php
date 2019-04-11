@@ -14,7 +14,10 @@
                             <div class="input-group-text">@</div>
                         </div>
                     <input name="correoLogin" type="email" class="form-control" placeholder="Email" required>
-                </div>
+            </div>
+
+
+
                 </div>
                 <div class="col-12 mt-3">
                 <div class="input-group">

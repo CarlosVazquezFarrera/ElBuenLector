@@ -71,8 +71,9 @@ a.dropdown-item:active
 }
 .ProfilePicture
 {
-    width: 90px;
+    width: 60px;
     border-radius:150px;
+    margin-bottom: 10px;
 }
 .modal-content
 {
@@ -162,4 +163,21 @@ a.dropdown-item:active
 .btn-primary
 {
     background-color: #7b5849;
+}
+.comentario
+{
+    margin-bottom: 0;
+    display: inline-block;
+    width: 92%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(218, 211, 202, 0.8);
+}
+.perfil
+{
+    color: red;
+}
+p .comentario strong
+{
+    color: red;
 }
