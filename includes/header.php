@@ -3,6 +3,9 @@
     if (isset($_GET["session"]) && $_GET["session"] == "logout")
     {
         session_destroy();
+        echo "
+            location.reload();
+        ";
     }
 ?>
 <!DOCTYPE html>

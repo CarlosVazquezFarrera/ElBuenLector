@@ -91,7 +91,11 @@
             $_SESSION["usuario"] = $datos["nombre"];
             $_SESSION["correo"] = $datos["nombre"];
             $_SESSION["img"] = $datos["img"];
-
+            echo '<script> 
+            {
+              window.history.go(-1);
+            }
+            </script>';
             //header('Location: http://localhost/ElBuenLector/');
         }
     }

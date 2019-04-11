@@ -35,7 +35,7 @@
                 onSet: function (rating, rateYoInstance) 
                 {
                     alert("Le has dado " + rating + " estrellas");
-                    window.location="http://localhost/ElBuenLector/libro.php";
+                    //window.location="http://localhost/ElBuenLector/libro.php";
                     //window.location="http://localhost/estrella/funciones/insert.php?id=<?=4?>&user=<?=2?>&calificacion="+rating;
                 }
             });
