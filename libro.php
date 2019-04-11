@@ -16,11 +16,11 @@
 ?>
     <div class="container">
         <div class="row">
-            <!-- imagen -->
+        <!-- imagen -->
             <div class="col-12 col-lg-6">
                 <img src = "images/libros/<?=$dato["img"]?>">
             </div>
-            <!-- datos del libro -->
+        <!-- datos del libro -->
             <div class="col-12 col-lg-6">
                 <h1><?=ucwords($dato["nombre"])?></h1>
                 <h2 class = "h5">De <?=ucwords($dato["autor"])?></h2>
@@ -49,6 +49,14 @@
         <hr>
         <div class="w-100 mt-5">
         </div>
+        <div class="row align-items-end">
+            <div class="col-11">
+                <textarea class="form-control" placeholder="Escribe un comentario" required></textarea>
+            </div>
+            <div class="col-1">
+                <button type="submit" class="btn btn-outline-dark login">Comentar</button>
+            </div>
+        </div>
 
         <?php if (!isset($_SESSION["usuario"]) && empty($_SESSION["usuario"]))
         {
@@ -62,12 +70,12 @@
         <?php
         }
         ?>
-
+        <!-- comentarios -->
         <?php
         for ($i = 1; $i <=5; $i++)
         {
         ?>
-        <div class="row align-items-center">
+        <div class="row align-items-center">           
             <div class="col-12 col-md-1 mt-3">
                 <img src ="images/users/1.JPG" class="ProfilePicture img-circle">
             </div>

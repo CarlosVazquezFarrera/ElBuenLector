@@ -159,3 +159,7 @@ a.dropdown-item:active
     padding: 15px;
     border-radius: 15px;
 }
+.btn-primary
+{
+    background-color: #7b5849;
+}
