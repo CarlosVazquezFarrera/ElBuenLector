@@ -81,7 +81,6 @@ a.dropdown-item:active
     background-color: #f8f7f3;
     padding: 0 18;
     border-radius: 10px;
-    border: #7b5849 solid 1px;
 }
 .user-img img
 {
@@ -94,11 +93,7 @@ a.dropdown-item:active
     background-color: #7b5849;
     opacity: .9;
 }
-.sesion
-{
-    border: #7b5849 1px solid;
-    border-radius: 5px;
-}
+
 .c-img
 {
     width: 95%;
@@ -166,18 +161,11 @@ a.dropdown-item:active
 }
 .comentario
 {
+    font-family: 'Merriweather', serif; 
     margin-bottom: 0;
     display: inline-block;
     width: 92%;
     padding: 10px;
-    border-radius: 15px;
-    background-color: rgba(218, 211, 202, 0.8);
-}
-.perfil
-{
-    color: red;
-}
-p .comentario strong
-{
-    color: red;
+    border-radius: 45px;
+    background-color: rgba(218, 211, 202, 0.4);
 }

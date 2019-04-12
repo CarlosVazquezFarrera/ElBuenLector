@@ -59,7 +59,7 @@
             <form action="controller/comentario.php" method="post">
                 <input type="hidden" name = "libro" value=<?=$_GET["libro"]?>>   
                 <input type="hidden" name = "usuario" value =<?php  if (isset($_SESSION["usuario"])) echo $_SESSION["id_usuario"] ?>>
-                <div class="row align-items-end">
+                <div class="row align-items-end mb-3">
                     <div class="col-11">
                         <textarea class="form-control" name= "comentario" placeholder="Escribe un comentario" required></textarea>
                     </div>
@@ -77,16 +77,15 @@
             ?>
             <div class="row">
                <div class="col">
-                    <p class="text-center"><strong><a href="" data-toggle="modal" data-target="#sesion">Inicia sesión aquí</a> para poder comentar y calificar</strong></p>
-                    <?php require_once ("includes/modal.php")?>     
+                    <p class="text-center"><strong><a href="" data-toggle="modal" data-target="#sesion">Inicia sesión aquí</a> para poder comentar y calificar</strong></p> 
                 </div>
             </div>
+            <?php require_once ("includes/modal.php")?>   
         <?php
         }
         ?>
         <!-- comentarios -->
-        <div class="w-100 mt-5"></div>
-        <hr>
+        <div class="w-100"></div>
         <?php
         while ($comentario = $comentarios->fetch_assoc())
         {
@@ -101,4 +100,5 @@
         }
         ?>
     </div>
+    
 <?php require_once ("includes/footer.php")?> 

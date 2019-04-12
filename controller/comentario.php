@@ -5,7 +5,7 @@ if (!isset($_POST["comentario"]))
 }
 require_once("../DB/conectar.php");
 
-if ($mysqli->query($myquery = "INSERT INTO comentario (id_usuario, id_libro, comentario) VALUES ('{$_POST["usuario"]}', '{$_POST["libro"]}', '{$_POST["comentario"]}') ") )
+if ($mysqli->query("INSERT INTO comentario (id_usuario, id_libro, comentario) VALUES ('{$_POST["usuario"]}', '{$_POST["libro"]}', '{$_POST["comentario"]}') ") )
 {
     echo '<script> 
     {
