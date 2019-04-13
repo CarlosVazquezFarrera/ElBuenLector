@@ -7,11 +7,11 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.rateyo.js"></script>
     <script>
-        var estrellas = <?=$estrellas?>;
+        var calificacion = <?php echo $calificacion?>;
         $(function () {
             $("#estrellas").rateYo(
             {
-                rating    : estrellas,
+                rating    : calificacion,
                 spacing   : "5px",
                 starWidth: "20px",
                 readOnly  : true,
@@ -23,18 +23,35 @@
             });
  
         });
-
-        var calificacion = <?php echo $calificacion?>;
+        var estrellas = <?=$estrellas?>;
         $(function () 
         {
             $("#calificar").rateYo(
             {
-                rating: calificacion,
+                rating: estrellas,
                 spacing   : "5px",
                 halfStar: true,
+                multiColor: 
+                {
+                    "startColor": "#FF0000", //RED
+                    "endColor"  : "#EBA012"  //GREEN
+                },
                 onSet: function (rating, rateYoInstance) 
                 {
-                    window.location="http://localhost/ElBuenLector/controller/calificacion.php?libro=<?php if (isset($_GET["libro"])) echo $_GET["libro"] ?>&usuario=<?php if(isset($_SESSION["id_usuario"])) echo $_SESSION["id_usuario"]?>&calificacion="+rating;
+                    <?php
+                    if ($total["total"] <= 0)
+                    {   
+                    ?>
+                        window.location="http://localhost/ElBuenLector/controller/calificacion.php?insertar&libro=<?php if (isset($_GET["libro"])) echo $_GET["libro"] ?>&usuario=<?php if(isset($_SESSION["id_usuario"])) echo $_SESSION["id_usuario"]?>&calificacion="+rating;
+                    <?php 
+                    }
+                    else
+                    {
+                    ?>
+                        window.location="http://localhost/ElBuenLector/controller/calificacion.php?actualizar&libro=<?php if (isset($_GET["libro"])) echo $_GET["libro"] ?>&usuario=<?php if(isset($_SESSION["id_usuario"])) echo $_SESSION["id_usuario"]?>&calificacion="+rating;
+                    <?php
+                    }
+                    ?>
                 }
             });
         });

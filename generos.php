@@ -21,7 +21,7 @@
         </div>
         <div class="col-4">
             <div class="c-img">
-                <img src = "images/generos/erotico.jpg">
+                <a href = "libros.php?buscar=1"><img src = "images/generos/erotico.jpg"></a>
                 <div class="txt">
                     <h3>Eróticos</h3>
                 </div>                
