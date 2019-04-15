@@ -23,7 +23,7 @@
     $cali = $cal->fetch_assoc(); 
     $calificacion = $cali["calificacion"];
 
-    
+    $calificacion_user = 0;
     // calificacion del usuario
     if (isset($_SESSION["id_usuario"]) && !empty($_SESSION["id_usuario"]) )
     {
