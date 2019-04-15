@@ -7,11 +7,10 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.rateyo.js"></script>
     <script>
-        var calificacion = <?php echo $calificacion?>;
         $(function () {
-            $("#estrellas").rateYo(
+            $("#calificacion").rateYo(
             {
-                rating    : calificacion,
+                rating    : <?=$calificacion?>,
                 spacing   : "5px",
                 starWidth: "20px",
                 readOnly  : true,
@@ -21,14 +20,15 @@
                     "endColor"  : "#EBA012"  //GREEN
                 }
             });
- 
         });
-        var estrellas = <?=$estrellas?>;
+    </script>
+
+    <script>
         $(function () 
         {
             $("#calificar").rateYo(
             {
-                rating: estrellas,
+                rating: <?=$calificacion_user?>,
                 spacing   : "5px",
                 halfStar: true,
                 multiColor: 
@@ -55,7 +55,6 @@
                 }
             });
         });
-
     </script>
   </body>
 </html>

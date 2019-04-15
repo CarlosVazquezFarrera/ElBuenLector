@@ -14,27 +14,33 @@
                                 FROM usuario u JOIN comentario c ON (u.id_usuario = c.id_usuario)
                                 WHERE c.id_libro = {$_GET['libro']}
                                 ORDER BY c.id_comentario DESC");
-
-    $total_cal = $mysqli->query("SELECT COUNT(*) AS total FROM calificacion 
-                                WHERE id_libro = {$_GET["libro"]} AND id_usuario = {$_SESSION["id_usuario"] }");
     
-    $total = $total_cal->fetch_assoc();
-
-    $estrellas = 0;
-  
-
-    if ($total["total"] > 0)
-    {
-        $star = $mysqli->query("SELECT calificacion FROM calificacion 
-                                WHERE id_libro = {$_GET["libro"]} AND id_usuario = {$_SESSION["id_usuario"] } ");
-        $stars = $star->fetch_assoc();
-        $estrellas = $stars["calificacion"];
-    }    
+    
+    //Calificacion del libro 
     $cal = $mysqli->query("SELECT IF ( AVG(calificacion) > 0, ROUND(AVG(calificacion), 1), 0) AS calificacion 
-                            FROM calificacion
-                            WHERE id_libro = {$_GET["libro"]}");
+                        FROM calificacion
+                        WHERE id_libro = {$_GET["libro"]}");
     $cali = $cal->fetch_assoc(); 
     $calificacion = $cali["calificacion"];
+
+    
+    // calificacion del usuario
+    if (isset($_SESSION["id_usuario"]) && !empty($_SESSION["id_usuario"]) )
+    {
+        $total_cal = $mysqli->query("SELECT COUNT(*) AS total FROM calificacion 
+                                    WHERE id_libro = {$_GET["libro"]} AND id_usuario = {$_SESSION["id_usuario"] }");
+    
+        $total = $total_cal->fetch_assoc();
+        if ($total["total"] > 0)
+        {
+            $cal_user = $mysqli->query("SELECT calificacion FROM calificacion 
+                                WHERE id_libro = {$_GET["libro"]} AND id_usuario = {$_SESSION["id_usuario"] } ");
+            $califi_user = $cal_user->fetch_assoc();  
+            $calificacion_user = $califi_user["calificacion"];
+        }    
+    }
+
+  
 ?>
     <div class="container">
         <div class="row">
@@ -48,7 +54,7 @@
                 <h2 class = "h5">De <?=ucwords($dato["autor"])?></h2>
                 <h6>Publicado <?=$dato["publicacion"]?></h6>
                 <!-- estrellas -->
-                <div id="estrellas"></div>   
+                <div id="calificacion"></div>   
 
                 <h2 class = "text-center mt-3 mb-3">Sinopsis</h2>
                 <p class="text-justify"> 
@@ -80,10 +86,10 @@
                 <input type="hidden" name = "libro" value=<?=$_GET["libro"]?>>   
                 <input type="hidden" name = "usuario" value =<?php  if (isset($_SESSION["usuario"])) echo $_SESSION["id_usuario"] ?>>
                 <div class="row align-items-end mb-3">
-                    <div class="col-11">
+                    <div class="col-12 col-md-11">
                         <textarea class="form-control" name= "comentario" placeholder="Escribe un comentario" required></textarea>
                     </div>
-                    <div class="col-1">
+                    <div class="col-12 col-md-1 mt-2 mt-md-0">
                         <button type="submit" class="btn btn-outline-dark login">Comentar</button>
                     </div>
                 </div>
