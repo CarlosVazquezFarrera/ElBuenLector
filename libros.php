@@ -9,7 +9,7 @@
     {
         $libros = $mysqli->query("SELECT l.id_libro, l.nombre, SUBSTRING(l.sinopsis, 1,100) AS sinopsis, l.img
                                 FROM libro l JOIN autor a ON (l.id_autor = a.id_autor)
-                                WHERE (a.nombre LIKE '%{$_GET["buscar"]}%' OR l.nombre LIKE '%{$_GET["buscar"]}%') OR  l.id_genero = '{$_GET["buscar"]}'  ");
+                                WHERE (a.nombre LIKE '%{$_GET["buscar"]}%' OR l.nombre LIKE '%{$_GET["buscar"]}%') OR  l.id_genero = '{$_GET["buscar"]}' OR a.id_autor = '{$_GET["buscar"]}' ");
     }
 
 ?>

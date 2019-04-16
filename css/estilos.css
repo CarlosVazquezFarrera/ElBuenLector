@@ -25,6 +25,10 @@ body
     font-family: 'Merriweather', serif;  
     font-size: 150%;
 }
+.descubre
+{
+    font-family: 'Merriweather', serif;  
+}
 a.dropdown-item:active
 {
     background-color: rgb(218, 211, 202);
