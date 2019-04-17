@@ -1,4 +1,23 @@
-<?php require_once ("includes/header.php")?>
+<?php require_once ("includes/header.php");
+$randon = rand(1,50);
+define('CANTIDAD_LIBROS', 20);
+$myquery = "SELECT l.nombre, l.sinopsis, l.img, a.nombre AS autor, a.id_autor 
+            FROM libro l JOIN autor a ON (l.id_autor = a.id_autor) 
+            WHERE id_libro BETWEEN";
+
+if ($randon < CANTIDAD_LIBROS)
+{
+    $fin = ($randon + CANTIDAD_LIBROS);
+    $myquery .= " {$randon} AND {$fin}";
+}
+else
+{
+    $fin = ($randon - CANTIDAD_LIBROS);
+    $myquery .= " {$fin} AND {$randon}";
+}
+echo $myquery;
+
+?>
 <div class="container">
     <h1 class="text-center descubre">Descubre algo nuevo</h1>
     <div class="row mt-4">
