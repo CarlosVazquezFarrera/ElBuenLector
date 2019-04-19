@@ -2,6 +2,10 @@
     require_once ("includes/header.php");
     require_once("function/funciones.php");
     require_once("controller/registrar.php");
+
+    $host= $_SERVER["HTTP_HOST"];
+    $url= $_SERVER["REQUEST_URI"];
+    $_SESSION["peticion"] = 'http://' . $host . $url;
  ?>
 
     <div class="container">

@@ -72,10 +72,14 @@ a.dropdown-item:active
 .input-group-text 
 {
     background-color:rgb(218, 211, 202);
+
+}
+.fotoComentario
+{
+    width: 60px;
 }
 .ProfilePicture
 {
-    width: 60px;
     border-radius:150px;
     margin-bottom: 10px;
 }
@@ -172,4 +176,8 @@ a.dropdown-item:active
     padding: 10px;
     border-radius: 45px;
     background-color: rgba(218, 211, 202, 0.4);
+}
+.perfil
+{
+    width: 350px;
 }

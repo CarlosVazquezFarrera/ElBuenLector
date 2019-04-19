@@ -89,14 +89,23 @@
         {
             $_SESSION["id_usuario"] = $datos["id_usuario"];
             $_SESSION["usuario"] = $datos["nombre"];
-            $_SESSION["correo"] = $datos["nombre"];
+            $_SESSION["apellidos"] = $datos["apellidos"];
+            $_SESSION["correo"] = $datos["correo"];
             $_SESSION["img"] = $datos["img"];
-            echo '<script> 
+
+            if ($_SESSION["peticion"] == 'http://localhost/ElBuenLector/' || $_SESSION["peticion"] == 'http://localhost/ElBuenLector/index.php')
             {
-              window.history.go(-1);
+                header('Location: http://localhost/ElBuenLector/inicio.php');
             }
-            </script>';
-            //header('Location: http://localhost/ElBuenLector/');
+            else
+            {
+                echo '<script> 
+                {
+                    window.history.go(-1);
+                }
+                </script>';
+            }
+        
         }
     }
 ?>

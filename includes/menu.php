@@ -22,7 +22,7 @@
          <?=ucwords($_SESSION["usuario"])?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Perfil</a>
+          <a class="dropdown-item" href="perfil.php">Perfil</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="index.php?session=logout">Cerrar Sesión</a>
         </div>

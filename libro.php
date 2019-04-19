@@ -1,5 +1,9 @@
 <?php require_once ("includes/header.php");
 
+    $host= $_SERVER["HTTP_HOST"];
+    $url= $_SERVER["REQUEST_URI"];
+    $_SESSION["peticion"] = 'http://' . $host . $url;
+
     if (!isset($_GET["libro"]))
     {
         header('Location: http://localhost/ElBuenLector/');
@@ -46,7 +50,7 @@
         <div class="row">
         <!-- imagen -->
             <div class="col-12 col-lg-6">
-                <img src = "images/libros/<?=$dato["img"]?>">
+                <img src = "images/libros/<?=$dato["img"]?>" class="img-fluid">
             </div>
         <!-- datos del libro -->
             <div class="col-12 col-lg-6">
@@ -112,13 +116,15 @@
         ?>
         <!-- comentarios -->
         <div class="w-100"></div>
+        <h3>Comentarios</h3>
+        <hr>
         <?php
         while ($comentario = $comentarios->fetch_assoc())
         {
         ?>
         <div class="row">           
             <div class="col-12 mb-3">
-                <img src ="images/users/<?=$comentario["img"]?>" class="ProfilePicture img-circle mr-3">
+                <img src ="images/users/<?=$comentario["img"]?>" class="ProfilePicture img-circle mr-3 fotoComentario">
                 <p class = "comentario"><strong class="nombre"><?=ucwords($comentario["nombre"])." ".ucwords($comentario["apellidos"])?></strong> <?=$comentario["comentario"]?></p>
             </div>
         </div>

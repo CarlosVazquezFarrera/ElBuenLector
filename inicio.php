@@ -5,7 +5,7 @@ $myquery = "SELECT l.nombre, l.sinopsis, l.img, a.nombre AS autor, a.id_autor
             FROM libro l JOIN autor a ON (l.id_autor = a.id_autor) 
             WHERE id_libro BETWEEN";
 
-if ($randon < CANTIDAD_LIBROS)
+if ($randon <= CANTIDAD_LIBROS)
 {
     $fin = ($randon + CANTIDAD_LIBROS);
     $myquery .= " {$randon} AND {$fin}";
